@@ -1,38 +1,257 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
   display: flex;
   flex-direction: column;
+  background-color: #c5e4e7;
+  height: 100vh;
   align-items: center;
+}
+.App {
+  margin-top: 50px;
+}
+.logo {
+  margin-bottom: 40.86px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 789px;
+  background: #ffffff;
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px;
+}
+.Labels {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7a7d;
+  margin-bottom: 6px;
+  margin-top: 32px;
+  margin-left: 32px;
+}
+#billAmount {
+  background-image: url(./images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 5%;
+  padding-left: 187.12px;
+  height: 48px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #f3f9fa;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  color: #00474b;
+  padding-right: 17.48px;
+  cursor: pointer;
+  outline: none;
+}
+#billAmount:focus {
+  border: 2px solid #26c2ae;
+  border-radius: 5px;
+  /* outline: none; */
+}
+#billAmount:active {
+  border: #26c2ae;
+  /* outline: none; */
+}
+#FillText {
+  height: 48px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-color: #f3f9fa;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  color: #00474b;
+  padding-right: 17.48px;
+  margin-top: 6px;
+  margin-left: 32px;
+  margin-right: 32px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  color: #00474b;
+  outline: none;
+}
+#FillText:focus {
+  border: 2px solid #26c2ae;
+}
+.Second {
+  margin-top: 32px;
+}
+.perCentButtons {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 16.56px;
+  row-gap: 16px;
+  /* width: 100%; */
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.tipPerCent {
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  background: #00474b;
+  border-radius: 5px;
+  border: 0px;
+  height: 48px;
+  width: 147px;
+  cursor: pointer;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+.tipPerCent:hover {
+  background: #9fe8df;
+  color: #00474b;
+}
+.tipPerCent:focus {
+  background: #26c2ae;
+  color: #00474b;
 }
 
-.App-link {
-  color: #61dafb;
+.tipAmountNumber {
+  border-radius: 5px;
+  border: 2px solid transparent;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  color: #547878;
+  background: #f3f9fa;
+  width: 139px;
+  height: 44px;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: right;
+  color: #547878;
+  outline: none;
+}
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+.tipAmountNumber:focus {
+  border: 2px solid #26c2ae;
+}
+.calculation {
+  background-color: #00474b;
+  margin: 24px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  height: 257px;
+}
+.beforeReset {
+  margin-top: 39px;
+  margin-left: 22px;
+  margin-right: 22px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.heads {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.persons {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  color: #7f9d9f;
+  transform: translateY(-93%);
+}
+.resultNumbers {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 47px;
+  text-align: right;
+  letter-spacing: -0.666667px;
+  color: #26c2ae;
+}
+.resultText {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-15%);
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-30%);
+}
+.results {
+  transform: translate(90%, 13%);
+}
+#total {
+  transform: translateX(130%);
+}
+#reset {
+  height: 48px;
+  width: 281px;
+  border-radius: 5px;
+  margin-bottom: 24px;
+  margin-top: 33px;
+  transform: translateY(-193%);
+  border: 0px;
+  background: #0d686d;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #00474b;
+  mix-blend-mode: normal;
+  /* opacity: 0.35; */
+  cursor: pointer;
+}
+#reset:hover {
+  background: #9fe8df;
+  color: #00474b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* #reset:focus {
+  background: #26c2ae;
+  color: #00474b;
+} */
+
+.resetButDiv {
+  display: flex;
+  justify-content: center;
+}
+.totol {
+  transform: translateY(-10%);
 }

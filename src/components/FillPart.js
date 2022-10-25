@@ -36,41 +36,52 @@ const FillPart = () => {
     setCatchpeople(Number(e.target.value));
   };
 
+  const addError = () => {
+    if (catchPeople === 0) {
+      console.log("fgrrrfg");
+      return <h4>Can’t be zero</h4>;
+    }
+  };
+
   return (
     <div className="main">
       <img className="logo" src={Logo} alt="logo" />
       <div className="container">
-        <label className="Labels" htmlFor="FillText">
-          Bill
-        </label>
-        <input
-          onChange={handleBillInput}
-          min="1"
-          type="number"
-          id="FillText"
-          placeholder="0"
-          value={catchedBill}
-        />
-        <div className="selectTip">
-          <div className="Labels Second">
-            <label htmlFor="Labels">Select Tip %</label>
+        <div className="forPaddings">
+          <div className="forColumn">
+            <label className="Labels labBill" htmlFor="FillText">
+              Bill
+            </label>
+            <input
+              onChange={handleBillInput}
+              min="1"
+              type="number"
+              id="FillText"
+              placeholder="0"
+              value={catchedBill}
+            />
           </div>
-          <div className="perCentButtons" id="perCentButtons">
-            <button onClick={clickHandler} className="tipPerCent" value="5">
-              5%
-            </button>
-            <button onClick={clickHandler} className="tipPerCent" value="10">
-              10%
-            </button>
-            <button onClick={clickHandler} className="tipPerCent" value="15">
-              15%
-            </button>
-            <button onClick={clickHandler} className="tipPerCent" value="25">
-              25%
-            </button>
-            <button onClick={clickHandler} className="tipPerCent" value="50">
-              50%
-            </button>
+          <div className="selectTip">
+            <div className="Labels Second ">
+              <label htmlFor="Labels">Select Tip %</label>
+            </div>
+            <div className="perCentButtons" id="perCentButtons">
+              <button onClick={clickHandler} className="tipPerCent" value="5">
+                5%
+              </button>
+              <button onClick={clickHandler} className="tipPerCent" value="10">
+                10%
+              </button>
+              <button onClick={clickHandler} className="tipPerCent" value="15">
+                15%
+              </button>
+              <button onClick={clickHandler} className="tipPerCent" value="25">
+                25%
+              </button>
+              <button onClick={clickHandler} className="tipPerCent" value="50">
+                50%
+              </button>
+            </div>
             <div>
               <input
                 onChange={inputHandler}
@@ -83,8 +94,11 @@ const FillPart = () => {
             </div>
           </div>
           <div className="sevarntsContainer">
-            <div className="Labels Second">
-              <label htmlFor="Labels">Number of People</label>
+            <div className="errorFlex">
+              <div className="Labels Second forDesktopSec">
+                <label htmlFor="Labels">Number of People</label>
+              </div>
+              <div className="errorText">{addError()}</div>
             </div>
             <input
               onChange={(e) => {
@@ -94,6 +108,8 @@ const FillPart = () => {
               type="number"
               id="FillText"
               placeholder="0"
+              className="numP"
+              style={{border: catchPeople===0 ? "2px solid red" : ""}}
               value={catchPeople}
             />
           </div>

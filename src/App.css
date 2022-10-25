@@ -26,6 +26,8 @@ body {
   background: #ffffff;
   box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
   border-radius: 25px 25px 0px 0px;
+  padding-top: 32px;
+  padding-bottom: 15px;
 }
 .Labels {
   font-family: "Space Mono";
@@ -147,6 +149,7 @@ body {
   text-align: right;
   color: #547878;
   outline: none;
+  transform: translate(134%, -94%);
 }
 /* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -254,4 +257,85 @@ input::-webkit-inner-spin-button {
 }
 .totol {
   transform: translateY(-10%);
+}
+.errorText {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #e17457;
+  transform: translate(24%, 15%);
+}
+.errorFlex{
+  display: flex;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 920px;
+    height: 481px;
+    flex-direction: row;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .errorText{
+    transform: translate(84%, -59%);
+  }
+  .forColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .perCentButtons {
+    grid-template-columns: auto auto auto;
+    margin-left: 48px;
+  }
+  .tipAmountNumber {
+    transform: translate(274%, -94%);
+    height: 48px;
+    width: 111px;
+  }
+  .forDesktopSec {
+    transform: translateY(-256%);
+  }
+  .numP {
+    transform: translateY(-124%);
+    height: 48px;
+    width: 379px;
+  }
+  .calculation {
+    height: 417px;
+    width: 413px;
+    margin-top: 32px;
+    margin-right: 32px;
+    margin-bottom: 32px;
+  }
+  .Labels {
+    margin-top: 45px;
+    margin-left: 48px;
+  }
+  #FillText {
+    margin-left: 48px;
+  }
+  .Second {
+    margin-top: 40px;
+    margin-left: 48px;
+  }
+  .tipPerCent {
+    height: 48px;
+    width: 117px;
+  }
+  .beforeReset {
+    margin-top: 58px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  #reset {
+    transform: translateY(57%);
+    height: 48px;
+    width: 333px;
+  }
+  .result {
+    transform: translateY(0%);
+  }
 }
